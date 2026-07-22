@@ -1,4 +1,6 @@
+
 import express from "express";
+import swaggerSpec from "../config/swagger.js"
 
 import {
   register,
@@ -18,16 +20,57 @@ import {
 
 const router = express.Router();
 
-
-// Register with Zod validation
+/**
+ * @swagger
+ * /api/auth/register:
+ *   post:
+ *     summary: Register a new user
+ *     tags:
+ *       - Auth
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *               - email
+ *               - password
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: Dahir
+ *               email:
+ *                 type: string
+ *                 example: dahir@gmail.com
+ *               password:
+ *                 type: string
+ *                 example: "123456"
+ *     responses:
+ *       201:
+ *         description: User registered successfully
+ *       400:
+ *         description: Validation error
+ *       500:
+ *         description: Server error
+ */
 router.post(
   "/register",
   validate(registerSchema),
   register
 );
 
-
-// Login with Zod validation
+/**
+ * @swagger
+ * /api/auth/login:
+ *   post:
+ *     summary: Login user
+ *     tags: [Auth]
+ *     responses:
+ *       200:
+ *         description: Login success (returns token)
+ */
 router.post(
   "/login",
 
