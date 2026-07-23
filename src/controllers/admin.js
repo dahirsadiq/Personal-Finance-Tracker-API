@@ -1,5 +1,5 @@
-import User from "../models/User.js";
-import Transaction from "../models/transaction.js";
+import User from "src/models/User.js";
+import Transaction from "src/models/transaction.js";
 
 export const overview = async (req, res) => {
   const users = await User.countDocuments();
