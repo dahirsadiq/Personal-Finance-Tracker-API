@@ -11,7 +11,7 @@ import adminRoutes from "./routes/adminRoutes.js";
 
 import errorHandler from "./middleware/errorHandler.js";
 import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "../src/config/swagger.js"
+import swaggerSpec from "./config/swagger.js"
 
 const app = express();
  app.use(express.json());

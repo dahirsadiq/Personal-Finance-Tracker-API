@@ -1,11 +1,11 @@
-import swaggerSpec from "../config/swagger.js";
+import swaggerSpec from "../../config/swagger.js";
 import express from "express";
-import { overview } from "../controllers/admin.js";
+import { overview } from "../../controllers/admin.js";
 
 import {
   protect,
   isAdmin
-} from "../middleware/authMiddleware.js";
+} from "../../middleware/authMiddleware.js";
 
 const router = express.Router();
 

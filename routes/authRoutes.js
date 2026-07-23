@@ -15,7 +15,7 @@ import validate from "../middleware/validateMiddleware.js";
 import {
   registerSchema,
   loginSchema
-} from "../validations/authValidation.js";
+} from "../src/validations/authValidation.js";
 
 
 const router = express.Router();

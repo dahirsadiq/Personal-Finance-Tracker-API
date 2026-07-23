@@ -1,12 +1,12 @@
 
-import swaggerSpec from "../config/swagger.js"
+import swaggerSpec from "../../config/swagger.js"
 import express from "express";
 import {
   upload,
   uploadProfile
-} from "../controllers/upload.js";
+} from "../../controllers/upload.js";
 
-import { protect } from "../middleware/authMiddleware.js";
+import { protect } from "../../middleware/authMiddleware.js";
 
 const router = express.Router();
 

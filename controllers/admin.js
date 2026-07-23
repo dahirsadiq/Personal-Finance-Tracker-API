@@ -1,5 +1,6 @@
-import User from "#src/models/User.js";
-import Transaction from "#src/models/Transaction.js";
+
+import User from "../models/user.js"
+import Transaction from "../models/transaction.js"
 
 
 export const overview = async (req, res) => {
