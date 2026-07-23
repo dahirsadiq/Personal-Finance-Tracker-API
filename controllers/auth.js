@@ -1,6 +1,6 @@
 
 import User from "../models/user.js"
-
+import { validateRegister, validateLogin } from "../validations/authValidation.js";
 
 import bcrypt from "bcryptjs";
 import generateToken from "../utils/generateToken.js";
