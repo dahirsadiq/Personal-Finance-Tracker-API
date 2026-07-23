@@ -1,4 +1,4 @@
-import Transaction from "../models/transaction.js";
+import Transaction from "#src/models/Transaction.js";
 
 
 import mongoose from "mongoose";
